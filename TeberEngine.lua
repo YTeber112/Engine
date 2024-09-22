@@ -133,7 +133,7 @@ end)
 
 _tCore.newFunction("getCharacter", function(PLR: Player)
     _tCore.type_check(1, PLR, {"Instance"})
-    return PLR.Character or PLR.CharacterAdded:Wait(), 
+    return PLR.Character or PLR.CharacterAdded:Wait()
 end)
 
 _tCore.newFunction("FEToolgrip", function(tool: string | nil, grip: any) --[[// Changes the toolgrip of the tool (NOISE WARNING LOL).]]
