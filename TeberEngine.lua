@@ -141,7 +141,7 @@ _tCore.newFunction("FEToolgrip", function(tool: string | nil, grip: any) --[[// 
     _tCore.type_check(2, grip, {"Vector3"})
     lp = _tEngine.srv.Players.LocalPlayer
     if tool then
-    for _, v in pairs(_tCore.getCharacter(lp):GetChildren()) do
+    for _, v in pairs(_tEngine.getCharacter(lp):GetChildren()) do
         if v:IsA("Tool") and v.Name == tool then
             v.Parent = lp.Backpack
             v.GripPos = grip
@@ -155,7 +155,7 @@ _tCore.newFunction("FEToolgrip", function(tool: string | nil, grip: any) --[[// 
         end
     end
     else
-        for _, v in pairs(_tCore.getCharacter(lp):GetChildren()) do
+        for _, v in pairs(_tEngine.getCharacter(lp):GetChildren()) do
             if v:IsA("Tool") then
                 v.Parent = lp.Backpack
                 v.GripPos = grip
